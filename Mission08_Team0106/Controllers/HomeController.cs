@@ -18,10 +18,42 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    // Display the form for adding or editing a task
+    public IActionResult AddEditTask(int? id)
     {
-        return View();
+        var model = new HabitTask();
+        if (id.HasValue)
+        {
+            // Dummy data for editing - in reality, you'd get this from a database
+            model = new HabitTask
+            {
+                TaskId = id.Value,
+                Title = "Sample Task",
+                DueDate = DateTime.Today,
+                Quadrant = 2,
+                Category = 3,
+                Completed = true
+            };
+        }
+        return View(model);
     }
+
+    // Handle the form submission
+    [HttpPost]
+    public IActionResult SaveTask(HabitTask model)
+    {
+        if (ModelState.IsValid)
+        {
+            // For demonstration, we'll just return to the same view
+            // Normally, you'd save the data to a database here
+            TempData["SuccessMessage"] = "Task saved successfully!";
+            return RedirectToAction("AddEditTask");
+        }
+
+        return View("AddEditTask", model);
+    }
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
