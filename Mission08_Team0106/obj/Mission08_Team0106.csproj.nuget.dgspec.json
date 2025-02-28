@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ryanspencer/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj": {}
+    "/Users/carsonconnors/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj": {}
   },
   "projects": {
-    "/Users/ryanspencer/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj": {
+    "/Users/carsonconnors/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ryanspencer/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj",
+        "projectUniqueName": "/Users/carsonconnors/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj",
         "projectName": "Mission08_Team0106",
-        "projectPath": "/Users/ryanspencer/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj",
-        "packagesPath": "/Users/ryanspencer/.nuget/packages/",
-        "outputPath": "/Users/ryanspencer/RiderProjects/Mission08_Team0106/Mission08_Team0106/obj/",
+        "projectPath": "/Users/carsonconnors/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj",
+        "packagesPath": "/Users/carsonconnors/.nuget/packages/",
+        "outputPath": "/Users/carsonconnors/RiderProjects/Mission08_Team0106/Mission08_Team0106/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ryanspencer/.nuget/NuGet/NuGet.Config"
+          "/Users/carsonconnors/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -42,6 +42,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

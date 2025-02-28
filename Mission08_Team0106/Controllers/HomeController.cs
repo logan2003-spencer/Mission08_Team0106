@@ -4,28 +4,43 @@ using Mission08_Team0106.Models;
 
 namespace Mission08_Team0106.Controllers;
 
-public class HomeController : Controller
+public class QuadrantsController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ApplicationDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public QuadrantsController(ApplicationDbContext context)
     {
-        _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
     {
-        return View();
+        var tasks = _context.QuadrantTasks.ToList();
+        return View(tasks);
     }
 
-    public IActionResult Privacy()
+    [HttpPost]
+    public IActionResult Update(int id, string description, int quadrant)
     {
-        return View();
+        var task = _context.QuadrantTasks.Find(id);
+        if (task != null)
+        {
+            task.Description = description;
+            task.Quadrant = quadrant;
+            _context.SaveChanges();
+        }
+        return RedirectToAction("Index");
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    [HttpPost]
+    public IActionResult Delete(int id)
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        var task = _context.QuadrantTasks.Find(id);
+        if (task != null)
+        {
+            _context.QuadrantTasks.Remove(task);
+            _context.SaveChanges();
+        }
+        return RedirectToAction("Index");
     }
 }

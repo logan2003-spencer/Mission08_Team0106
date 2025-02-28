@@ -1,8 +1,111 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model List<QuadrantTask>
+
+@{
+    ViewData["Title"] = "Quadrants View";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Q1 (Urgent & Important)</h1>
+            @foreach (var task in Model.Where(t => t.Quadrant == 1))
+            {
+                <div class="task">
+                    <p>@task.Description</p>
+                    <form method="post" asp-action="Update">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <input type="text" name="description" value="@task.Description" />
+                        <select name="quadrant">
+                            <option value="1" selected>Q1</option>
+                            <option value="2">Q2</option>
+                            <option value="3">Q3</option>
+                            <option value="4">Q4</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                    <form method="post" asp-action="Delete">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            }
+        </div>
+
+        <div class="col">
+            <h1>Q2 (Not Urgent & Important)</h1>
+            @foreach (var task in Model.Where(t => t.Quadrant == 2))
+            {
+                <div class="task">
+                    <p>@task.Description</p>
+                    <form method="post" asp-action="Update">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <input type="text" name="description" value="@task.Description" />
+                        <select name="quadrant">
+                            <option value="1">Q1</option>
+                            <option value="2" selected>Q2</option>
+                            <option value="3">Q3</option>
+                            <option value="4">Q4</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                    <form method="post" asp-action="Delete">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            }
+        </div>
+
+        <div class="w-100"></div>
+
+        <div class="col">
+            <h1>Q3 (Urgent & Not Important)</h1>
+            @foreach (var task in Model.Where(t => t.Quadrant == 3))
+            {
+                <div class="task">
+                    <p>@task.Description</p>
+                    <form method="post" asp-action="Update">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <input type="text" name="description" value="@task.Description" />
+                        <select name="quadrant">
+                            <option value="1">Q1</option>
+                            <option value="2">Q2</option>
+                            <option value="3" selected>Q3</option>
+                            <option value="4">Q4</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                    <form method="post" asp-action="Delete">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            }
+        </div>
+
+        <div class="col">
+            <h1>Q4 (Not Urgent & Not Important)</h1>
+            @foreach (var task in Model.Where(t => t.Quadrant == 4))
+            {
+                <div class="task">
+                    <p>@task.Description</p>
+                    <form method="post" asp-action="Update">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <input type="text" name="description" value="@task.Description" />
+                        <select name="quadrant">
+                            <option value="1">Q1</option>
+                            <option value="2">Q2</option>
+                            <option value="3">Q3</option>
+                            <option value="4" selected>Q4</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                    <form method="post" asp-action="Delete">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            }
+        </div>
+    </div>
 </div>
