@@ -2,6 +2,11 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Mission08_Team0106.Models;
 
+// Controllers needed:
+// httpget the form from database (viewbag the Category)
+// the page where all records are shown (where edit and delete buttons are)
+// httpget and post for edit and delete buttons
+
 namespace Mission08_Team0106.Controllers;
 
 public class QuadrantsController : Controller
