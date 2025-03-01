@@ -1,0 +1,147 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|c:\\users\\carso\\source\\repos\\mission08_team0106\\mission08_team0106\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|solutionrelative:mission08_team0106\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|c:\\users\\carso\\source\\repos\\mission08_team0106\\mission08_team0106\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|solutionrelative:mission08_team0106\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|c:\\users\\carso\\source\\repos\\mission08_team0106\\mission08_team0106\\views\\home\\addedittask.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|solutionrelative:mission08_team0106\\views\\home\\addedittask.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|c:\\users\\carso\\source\\repos\\mission08_team0106\\mission08_team0106\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|solutionrelative:mission08_team0106\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|c:\\users\\carso\\source\\repos\\mission08_team0106\\mission08_team0106\\models\\habittask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|solutionrelative:mission08_team0106\\models\\habittask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|c:\\users\\carso\\source\\repos\\mission08_team0106\\mission08_team0106\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|solutionrelative:mission08_team0106\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|c:\\users\\carso\\source\\repos\\mission08_team0106\\mission08_team0106\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A973AE4A-E41E-4B18-8000-15E7EE772FA0}|Mission08_Team0106\\Mission08_Team0106.csproj|solutionrelative:mission08_team0106\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Mission08_Team0106\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Mission08_Team0106\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T21:14:47.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Mission08_Team0106\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Mission08_Team0106\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-28T21:05:25.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Program.cs",
+              "RelativeDocumentMoniker": "Mission08_Team0106\\Program.cs",
+              "ToolTip": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Program.cs",
+              "RelativeToolTip": "Mission08_Team0106\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T16:10:36.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Mission08_Team0106\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Mission08_Team0106\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T16:03:44.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HabitTask.cs",
+              "DocumentMoniker": "C:\\Users\\carso\\Source\\Repos\\Mission08_Team0106\\Mission08_Team0106\\Models\\HabitTask.cs",
+              "RelativeDocumentMoniker": "Mission08_Team0106\\Models\\HabitTask.cs",
+              "ToolTip": "C:\\Users\\carso\\Source\\Repos\\Mission08_Team0106\\Mission08_Team0106\\Models\\HabitTask.cs",
+              "RelativeToolTip": "Mission08_Team0106\\Models\\HabitTask.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T16:02:33.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddEditTask.cshtml",
+              "DocumentMoniker": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Views\\Home\\AddEditTask.cshtml",
+              "RelativeDocumentMoniker": "Mission08_Team0106\\Views\\Home\\AddEditTask.cshtml",
+              "ToolTip": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Views\\Home\\AddEditTask.cshtml",
+              "RelativeToolTip": "Mission08_Team0106\\Views\\Home\\AddEditTask.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwD4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-26T17:44:52.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Mission08_Team0106\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\carso\\source\\repos\\Mission08_Team0106\\Mission08_Team0106\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Mission08_Team0106\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-26T17:41:55.262Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
