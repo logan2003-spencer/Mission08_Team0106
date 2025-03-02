@@ -4,105 +4,109 @@
     ViewData["Title"] = "Quadrants View";
 }
 
-<div class="container">
+<div class="container mt-4">
     <div class="row">
-        <div class="col">
-            <h1>Q1 (Urgent & Important)</h1>
+        <!-- Quadrant 1 -->
+        <div class="col-md-6 border p-3">
+            <h2 class="text-center">Q1 (Urgent & Important)</h2>
             @foreach (var task in Model.Where(t => t.Quadrant == 1))
             {
-                <div class="task">
+                <div class="task border rounded p-2 mb-2">
                     <p>@task.Description</p>
                     <form method="post" asp-action="Update">
                         <input type="hidden" name="id" value="@task.Id" />
-                        <input type="text" name="description" value="@task.Description" />
-                        <select name="quadrant">
+                        <input type="text" name="description" class="form-control mb-2" value="@task.Description" />
+                        <select name="quadrant" class="form-control mb-2">
                             <option value="1" selected>Q1</option>
                             <option value="2">Q2</option>
                             <option value="3">Q3</option>
                             <option value="4">Q4</option>
                         </select>
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary btn-sm w-100">Update</button>
                     </form>
                     <form method="post" asp-action="Delete">
                         <input type="hidden" name="id" value="@task.Id" />
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger btn-sm w-100 mt-1">Delete</button>
                     </form>
                 </div>
             }
         </div>
 
-        <div class="col">
-            <h1>Q2 (Not Urgent & Important)</h1>
+        <!-- Quadrant 2 -->
+        <div class="col-md-6 border p-3">
+            <h2 class="text-center">Q2 (Not Urgent & Important)</h2>
             @foreach (var task in Model.Where(t => t.Quadrant == 2))
             {
-                <div class="task">
+                <div class="task border rounded p-2 mb-2">
                     <p>@task.Description</p>
                     <form method="post" asp-action="Update">
                         <input type="hidden" name="id" value="@task.Id" />
-                        <input type="text" name="description" value="@task.Description" />
-                        <select name="quadrant">
+                        <input type="text" name="description" class="form-control mb-2" value="@task.Description" />
+                        <select name="quadrant" class="form-control mb-2">
                             <option value="1">Q1</option>
                             <option value="2" selected>Q2</option>
                             <option value="3">Q3</option>
                             <option value="4">Q4</option>
                         </select>
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary btn-sm w-100">Update</button>
                     </form>
                     <form method="post" asp-action="Delete">
                         <input type="hidden" name="id" value="@task.Id" />
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger btn-sm w-100 mt-1">Delete</button>
                     </form>
                 </div>
             }
         </div>
+    </div>
 
-        <div class="w-100"></div>
-
-        <div class="col">
-            <h1>Q3 (Urgent & Not Important)</h1>
+    <div class="row">
+        <!-- Quadrant 3 -->
+        <div class="col-md-6 border p-3">
+            <h2 class="text-center">Q3 (Urgent & Not Important)</h2>
             @foreach (var task in Model.Where(t => t.Quadrant == 3))
             {
-                <div class="task">
+                <div class="task border rounded p-2 mb-2">
                     <p>@task.Description</p>
                     <form method="post" asp-action="Update">
                         <input type="hidden" name="id" value="@task.Id" />
-                        <input type="text" name="description" value="@task.Description" />
-                        <select name="quadrant">
+                        <input type="text" name="description" class="form-control mb-2" value="@task.Description" />
+                        <select name="quadrant" class="form-control mb-2">
                             <option value="1">Q1</option>
                             <option value="2">Q2</option>
                             <option value="3" selected>Q3</option>
                             <option value="4">Q4</option>
                         </select>
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary btn-sm w-100">Update</button>
                     </form>
                     <form method="post" asp-action="Delete">
                         <input type="hidden" name="id" value="@task.Id" />
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger btn-sm w-100 mt-1">Delete</button>
                     </form>
                 </div>
             }
         </div>
 
-        <div class="col">
-            <h1>Q4 (Not Urgent & Not Important)</h1>
+        <!-- Quadrant 4 -->
+        <div class="col-md-6 border p-3">
+            <h2 class="text-center">Q4 (Not Urgent & Not Important)</h2>
             @foreach (var task in Model.Where(t => t.Quadrant == 4))
             {
-                <div class="task">
+                <div class="task border rounded p-2 mb-2">
                     <p>@task.Description</p>
                     <form method="post" asp-action="Update">
                         <input type="hidden" name="id" value="@task.Id" />
-                        <input type="text" name="description" value="@task.Description" />
-                        <select name="quadrant">
+                        <input type="text" name="description" class="form-control mb-2" value="@task.Description" />
+                        <select name="quadrant" class="form-control mb-2">
                             <option value="1">Q1</option>
                             <option value="2">Q2</option>
                             <option value="3">Q3</option>
                             <option value="4" selected>Q4</option>
                         </select>
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary btn-sm w-100">Update</button>
                     </form>
                     <form method="post" asp-action="Delete">
                         <input type="hidden" name="id" value="@task.Id" />
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger btn-sm w-100 mt-1">Delete</button>
                     </form>
                 </div>
             }

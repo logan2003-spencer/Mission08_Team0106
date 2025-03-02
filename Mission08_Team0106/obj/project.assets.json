@@ -2420,19 +2420,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/carsonconnors/.nuget/packages/": {}
+    "/Users/ryanspencer/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/carsonconnors/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj",
+      "projectUniqueName": "/Users/ryanspencer/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj",
       "projectName": "Mission08_Team0106",
-      "projectPath": "/Users/carsonconnors/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj",
-      "packagesPath": "/Users/carsonconnors/.nuget/packages/",
-      "outputPath": "/Users/carsonconnors/RiderProjects/Mission08_Team0106/Mission08_Team0106/obj/",
+      "projectPath": "/Users/ryanspencer/RiderProjects/Mission08_Team0106/Mission08_Team0106/Mission08_Team0106.csproj",
+      "packagesPath": "/Users/ryanspencer/.nuget/packages/",
+      "outputPath": "/Users/ryanspencer/RiderProjects/Mission08_Team0106/Mission08_Team0106/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/carsonconnors/.nuget/NuGet/NuGet.Config"
+        "/Users/ryanspencer/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
