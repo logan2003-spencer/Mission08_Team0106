@@ -1,113 +1,71 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Mission08_Team0106.Models;
+using System.Linq;
 
-namespace Mission08_Team0106.Controllers;
-
-
+namespace Mission08_Team0106.Controllers
+{
     public class QuadrantsController : Controller
     {
         private readonly ITaskRepository _repository;
-
         public QuadrantsController(ITaskRepository repository)
         {
             _repository = repository;
         }
-    
-    public IActionResult Index()
-    {
-        var tasks = _repository.GetAllTasks();
-        return View(tasks);    
-    }
-    
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-    
-    [HttpGet]
-    public IActionResult AddEditTask(int? id)
-    {
-        var task = id == null ? new HabitTask() : _repository.GetTaskById(id.Value);
-
-        ViewBag.Categories = _repository.GetCategories().OrderBy(c => c.Name).ToList();
-        return View(task);
-    }
-
-    [HttpPost]
-    public IActionResult AddEditTask(HabitTask habitTask)
-    {
-        if (ModelState.IsValid)
+        public IActionResult Index()
         {
-            if (habitTask.TaskId == 0)
+            var tasks = _repository.GetAllTasks().ToList();
+            return View(tasks);
+        }
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult AddEditTask(int? id)
+        {
+            var task = id == null ? new HabitTask() : _repository.GetTaskById(id.Value);
+            ViewBag.Categories = _repository.GetCategories().OrderBy(c => c.Name).ToList();
+            return View(task);
+        }
+        [HttpPost]
+        public IActionResult AddEditTask(HabitTask habitTask)
+        {
+            if (ModelState.IsValid)
             {
-                _repository.AddTask(habitTask);
+                if (habitTask.TaskId == 0)
+                {
+                    _repository.AddTask(habitTask);
+                }
+                else
+                {
+                    _repository.UpdateTask(habitTask);
+                }
+                return RedirectToAction("Index");
             }
-            else
+            ViewBag.Categories = _repository.GetCategories().OrderBy(c => c.Name).ToList();
+            return View(habitTask);
+        }
+        public IActionResult Quadrant()
+        {
+            var tasks = _repository.GetAllTasks().ToList();
+            return View(tasks);
+        }
+        [HttpPost]
+        public IActionResult Update(int id, int quadrant)
+        {
+            var task = _repository.GetTaskById(id);
+            if (task != null)
             {
-                _repository.UpdateTask(habitTask);
+                task.Quadrant = quadrant;
+                _repository.UpdateTask(task);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Quadrant");
         }
-
-        ViewBag.Categories = _repository.GetCategories().OrderBy(c => c.Name).ToList();
-        return View(habitTask);
-    }
-    
-    
-    
-    [HttpGet]
-    public IActionResult Quadrant()
-    {
-        var tasks = _context.Tasks.
-            ToList();
-        return View(tasks); // Explicitly set the path
-    }
-    
-    [HttpPost]
-    public IActionResult Update(int id, string description, int quadrant)
-    {
-        var task = _context.Tasks.Find(id);
-        if (task != null)
+        [HttpPost]
+        public IActionResult Delete(int id)
         {
-            // task.Description = description;
-            task.Quadrant = quadrant;
-            _context.SaveChanges();
+            _repository.DeleteTask(id);
+            return RedirectToAction("Quadrant");
         }
-        return RedirectToAction("Index");
     }
-
-
-    // Handle the form submission
-    [HttpPost]
-    public IActionResult SaveTask(HabitTask model)
-    {
-        if (ModelState.IsValid)
-        {
-            // For demonstration, we'll just return to the same view
-            // Normally, you'd save the data to a database here
-            TempData["SuccessMessage"] = "Task saved successfully!";
-            return RedirectToAction("AddEditTask");
-        }
-
-        return View("AddEditTask", model);
-    }
-
-
-
-    [HttpPost]
-    public IActionResult Delete(int id)
-    {
-        _repository.DeleteTask(id);
-        return RedirectToAction("Index");
-    }
-
-    public IActionResult Quadrant()
-    {
-        var tasks = _repository.GetAllTasks();
-        return View(tasks);
-    }
-    
-    
 }
