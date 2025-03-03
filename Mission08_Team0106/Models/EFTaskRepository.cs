@@ -1,22 +1,53 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Mission08_Team0106.Models
 {
     public class EFTaskRepository : ITaskRepository
     {
-        [Required]
-        public string Task { get; set; }
+        private readonly TaskContext _context;
 
-        [Required]
-        public DateTime DueDate { get; set; }
+        public EFTaskRepository(TaskContext context)
+        {
+            _context = context;
+        }
 
-        [Required]
-        public int Quadrant { get; set; }
+        public IEnumerable<HabitTask> GetAllTasks()
+        {
+            return _context.Tasks.Include(t => t.Category).ToList();
+        }
 
-        [Required]
-        [EnumDataType(typeof(Category))]
-        public Category? Category { get; set; }
+        public void AddTask(HabitTask task)
+        {
+            _context.Tasks.Add(task);
+            _context.SaveChanges();
+        }
 
-        public bool Completed { get; set; }
+        public HabitTask? GetTaskById(int id)
+        {
+            return _context.Tasks.Include(t => t.Category).FirstOrDefault(t => t.TaskId == id);
+        }
+
+        public void UpdateTask(HabitTask task)
+        {
+            _context.Tasks.Update(task);
+            _context.SaveChanges();
+        }
+
+        public void DeleteTask(int id)
+        {
+            var task = _context.Tasks.Find(id);
+            if (task != null)
+            {
+                _context.Tasks.Remove(task);
+                _context.SaveChanges();
+            }
+        }
+
+        public IEnumerable<Category> GetCategories()
+        {
+            return _context.Categories.ToList();
+        }
     }
 }
+
+

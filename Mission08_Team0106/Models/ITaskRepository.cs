@@ -1,11 +1,15 @@
 ﻿namespace Mission08_Team0106.Models
 {
-    public class ITaskRepository
+    public interface ITaskRepository
     {
-        string Task { get; set; }
-        DateTime DueDate { get; set; }
-        int Quadrant { get; set; }
-        Category? Category { get; set; }
-        bool Completed { get; set; }
+        IQueryable<HabitTask> Tasks { get; }
+        IEnumerable<HabitTask> GetAllTasks();
+        HabitTask? GetTaskById(int id);
+        void AddTask(HabitTask task);
+        void UpdateTask(HabitTask task);
+        void DeleteTask(int id);
+        IEnumerable<Category> GetCategories();  // for dropdowns
     }
 }
+
+

@@ -9,5 +9,7 @@ namespace Mission08_Team0106.Models
 
         [Required]
         public string Name { get; set; }
+        
+        public ICollection<HabitTask> Tasks { get; set; }
     }
 }
