@@ -97,7 +97,10 @@
                             <option value="3">Q3</option>
                             <option value="4" selected>Q4</option>
                         </select>
+                    <form method="post" asp-action="Update">
+                        <input type="hidden" name="id" value="@task.TaskId" />
                         <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
                     </form>
                     <form method="post" asp-action="Delete">
                         <input type="hidden" name="id" value="@task.TaskId" />

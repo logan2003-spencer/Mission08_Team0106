@@ -30,6 +30,7 @@ namespace Mission08_Team0106.Controllers
         [HttpPost]
         public IActionResult AddEditTask(HabitTask habitTask)
         {
+            
             if (ModelState.IsValid)
             {
                 if (habitTask.TaskId == 0)
@@ -40,9 +41,21 @@ namespace Mission08_Team0106.Controllers
                 {
                     _repository.UpdateTask(habitTask);
                 }
+
+                // Force saving changes to the database
+
                 return RedirectToAction("Index");
             }
+
+            // Debug: Print validation errors
+            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+            {
+                Console.WriteLine($"Validation Error: {error.ErrorMessage}");
+            }
+
+            // Always re-populate dropdown
             ViewBag.Categories = _repository.GetCategories().OrderBy(c => c.Name).ToList();
+
             return View(habitTask);
         }
         public IActionResult Quadrant()
