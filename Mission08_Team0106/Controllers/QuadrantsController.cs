@@ -63,6 +63,23 @@ namespace Mission08_Team0106.Controllers
             var tasks = _repository.GetAllTasks().ToList();
             return View(tasks);
         }
+        
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            var task = _repository.GetTaskById(id);
+
+            if (task == null)
+            {
+                return NotFound(); // Handle case where task does not exist
+            }
+
+            // Optionally, you could load categories if needed, or other data for the view
+            ViewBag.Categories = _repository.GetCategories().OrderBy(c => c.Name).ToList();
+
+            return View("AddEditTask", task); // You would need an Update.cshtml view to display the form.
+        }
+
         [HttpPost]
         public IActionResult Update(int id, int quadrant)
         {
