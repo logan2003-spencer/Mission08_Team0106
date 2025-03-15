@@ -21,7 +21,7 @@
                 <div class="col-md-6 border p-3">
                     <h4>Quadrant 1</h4>
                     <p><em>Crises, Pressing Problems, Projects with Deadlines</em></p>
-                    @foreach (var task in Model.Where(t => t.Quadrant == 1))
+                    @foreach (var task in Model.Where(t => t.Quadrant == 1 && !t.Completed))
                     {
                         <div class="task border p-2 mb-2">
                             <p>@task.Title</p>
@@ -36,7 +36,7 @@
                 <div class="col-md-6 border p-3">
                     <h4>Quadrant 2</h4>
                     <p><em>Relationship Building, Planning, Recreation</em></p>
-                    @foreach (var task in Model.Where(t => t.Quadrant == 2))
+                    @foreach (var task in Model.Where(t => t.Quadrant == 2 && !t.Completed))
                     {
                         <div class="task border p-2 mb-2">
                             <p>@task.Title</p>
